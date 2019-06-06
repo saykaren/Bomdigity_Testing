@@ -2,11 +2,12 @@ const assert = require("chai").assert;
 // const sayHello = require('../app').sayHello;
 // const addNumbers = require('../app').addNumbers;
 const app = require("../app");
-const calculator = require('../calculator').calculator;
+const calculatorGenerator = require('../calculator');
 
 //Results 
 sayHelloResult = app.sayHello();
 addNumbersResult = app.addNumbers(5,5);
+// calculatorAdd = calculator.calculatorAdd();
 
 describe("App", function(){
   describe('sayHello()', function() {
@@ -22,20 +23,53 @@ describe("App", function(){
   
   });
   
-  describe("addNumbers()", function(){
-    it("addNumbers should be above 5", function(){
-      // let results = app.addNumbers(5,5);
-      assert.isAbove(addNumbersResult, 5);
-    });
+  //Was testing adding in the app.js but need to do calculator
+  // describe("addNumbers()", function(){
+  //   it("addNumbers should be above 5", function(){
+  //     // let results = app.addNumbers(5,5);
+  //     assert.isAbove(addNumbersResult, 5);
+  //   });
   
-    it("addNumbers should return type number", function(){
-      // let result = addNumbers(5,5);
-      assert.typeOf(addNumbersResult, "number");
-    });
-  });
-  
+  //   it("addNumbers should return type number", function(){
+  //     // let result = addNumbers(5,5);
+  //     assert.typeOf(addNumbersResult, "number");
+  //   });
+
+  // });
+ 
 });
 
+describe('Karens Calculator', function(){
+  describe("Addition", function(){
+    let result = calculatorGenerator.calculatorAdd();
+    it('It should use calculator class to add numbers together', function(){
+      assert.equal(result, 11);
+    });
+  });
+
+  describe("Subtraction", function(){
+    let result = calculatorGenerator.calculatorSubtract();
+    it("It should use the calculator class to subtract numbers together", function(){
+      assert.equal(result, -1);
+    });
+  });
+
+  describe("Multiply", function(){
+    let result = calculatorGenerator.calculatorMultiply();
+    it("It should use the calculator class to multiply numbers together", function(){
+      assert.equal(result, 30);
+    });
+  });
+
+  describe("Divide", function(){
+    let result = calculatorGenerator.calculatorDivide();
+    it("It should use the calculator class to divide numbers together", function(){
+      assert.equal(result, 5/6);
+    });
+  });
+
+  
+});
 
 describe('Array', function(){
   describe('#indexOf()', function() {
@@ -56,17 +90,3 @@ describe('Math', function(){
   });
 });
 
-
-
-describe("Calculator", function(){
-  it("calculator should return sum", function(){
-    assert.equal(calculator(), "11");
-  });
-  
-  //below doesn't work as calculator is not defined 
-  // it("calculator should return correct addition", function(){
-  //   const equation = new Calculator(5, 6);
-  //   result = equation.add();
-  //   assert.equal(equation, "11");
-  // });
-});

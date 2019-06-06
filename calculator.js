@@ -1,8 +1,19 @@
 module.exports = {
-  calculator: function(){
+  calculatorAdd: function(){
+    //return equation.add();
     return equation.add();
-  }
+  },
+  calculatorSubtract: function(){
+    return equation.subtract();
+  },
 
+  calculatorMultiply: function(){
+    return equation.multiply();
+  },
+
+  calculatorDivide: function(){
+    return equation.divide();
+  },
 }
 
 
