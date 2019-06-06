@@ -37,6 +37,25 @@ describe("App", function(){
 });
 
 
+describe('Array', function(){
+  describe('#indexOf()', function() {
+    it('should return -1 when the value is not present', function(){
+      assert.equal(-1, [1,2,3].indexOf(4));
+    });
+  });
+});
+
+describe('Math', function(){
+  const result = 3*3;
+  it('it should return the result of multiplication', function(){
+    assert.equal(result, "9");
+  });
+  const secondResult = (3-4)*8;
+  it('it should be the correct results of minus then multiply', function(){
+    assert.equal(secondResult, "-8");
+  });
+});
+
 
 
 describe("Calculator", function(){
