@@ -22,6 +22,8 @@ describe("App", function(){
     });
   
   });
+
+
   
   //Was testing adding in the app.js but need to do calculator
   // describe("addNumbers()", function(){
@@ -40,9 +42,16 @@ describe("App", function(){
 });
 
 describe('Karens Calculator', function(){
-  describe("Addition", function(){
+  // describe("Addition", function(){
+  //   let result = calculatorGenerator.calculatorAdd();
+  //   it('It should use calculator class to add numbers together', function(){
+  //     assert.equal(result, 11);
+  //   });
+  // });
+
+  describe("Addition", () => {
     let result = calculatorGenerator.calculatorAdd();
-    it('It should use calculator class to add numbers together', function(){
+    it('It should use calculator class to add numbers together', ()=>{
       assert.equal(result, 11);
     });
   });
