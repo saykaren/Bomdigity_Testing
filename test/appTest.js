@@ -52,9 +52,7 @@ describe('Karens Calculator', function(){
     it("It should use the calculator class to divide numbers together", function(){
       assert.equal(result, 5/6);
     });
-  });
-
-  
+  });  
 });
 
 describe('Array', function(){
