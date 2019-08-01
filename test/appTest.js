@@ -22,32 +22,9 @@ describe("App", function(){
     });
   
   });
-
-
-  
-  //Was testing adding in the app.js but need to do calculator
-  // describe("addNumbers()", function(){
-  //   it("addNumbers should be above 5", function(){
-  //     // let results = app.addNumbers(5,5);
-  //     assert.isAbove(addNumbersResult, 5);
-  //   });
-  
-  //   it("addNumbers should return type number", function(){
-  //     // let result = addNumbers(5,5);
-  //     assert.typeOf(addNumbersResult, "number");
-  //   });
-
-  // });
- 
 });
 
 describe('Karens Calculator', function(){
-  // describe("Addition", function(){
-  //   let result = calculatorGenerator.calculatorAdd();
-  //   it('It should use calculator class to add numbers together', function(){
-  //     assert.equal(result, 11);
-  //   });
-  // });
 
   describe("Addition", () => {
     let result = calculatorGenerator.calculatorAdd();
